@@ -21,8 +21,19 @@
     let h = f + g; 
     //alert(h);
 
-    let isTheInputNumeric = prompt('Enter an alpha character');
-    alert(isNaN(isTheInputNumeric));
+    // let isTheInputNumeric = prompt('Enter an alpha character');
+    // console.log(isTheInputNumeric);
+    // alert(isNaN(isTheInputNumeric));
+
+    try{
+        let numberOrLetterInput = prompt('Please enter a number or a letter');
+        if(isNaN(numberOrLetterInput)){
+            throw new Error ('Inputs are invalid.');
+        }
+        catch (error) {
+            alert(error.message);
+        }
+    }
     </script>
 
    
